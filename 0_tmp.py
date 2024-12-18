@@ -6,3 +6,8 @@ print('Siema')
 
 sleep(3)
 print('papa')
+
+try:
+    age = int(input('Ile masz lat? '))
+except ValueError:
+    pass
