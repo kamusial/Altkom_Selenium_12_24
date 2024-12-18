@@ -26,7 +26,10 @@ password_field = driver.find_element(By.NAME, 'password')
 password_field.send_keys('secret_sauce')
 
 login_button = driver.find_element(By.XPATH, '/html/body/div/div/div[2]/div[1]/div/div/form/input')
-login_button.click()
+
+
+
+
 sleep(3)
 
 make_screenshot(driver)
