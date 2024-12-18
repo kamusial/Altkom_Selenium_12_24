@@ -16,7 +16,8 @@ def wait_for_id(element_id):
     timeout_message = f'Element {element_id} nie pojawił się w czasie {timeout}s'
     lokalizator = (By.ID, element_id)
     znaleziono = EC.visibility_of_element_located(lokalizator)
-    oczekiwator = WebDriverWait(driver, timeout).until(znaleziono, timeout_message)
+    oczekiwator = (WebDriverWait(driver, timeout))
+    return oczekiwator.until(znaleziono, timeout_message)
 
 
 driver = webdriver.Firefox()
@@ -47,5 +48,6 @@ except TimeoutException:
 else:
     print('Znaleziono')
 finally:
+    print('Finally')
     make_screenshot(driver)
     driver.quit()
