@@ -29,14 +29,19 @@ windowNames = driver.window_handles
 print(currentWindowName)
 print(windowNames)
 
-driver.switch_to.window(currentWindowName)
-
-
-
-
-
+for window in windowNames:
+    if window != currentWindowName:
+        driver.switch_to.window(window)
 
 driver.switch_to.frame(driver.find_element(By.ID,'iframeResult'))
 firstName = driver.find_element(By.ID, 'fname')
 time.sleep(2)
+if firstName.is_enabled():
+    firstName.clear()
+    firstName.send_keys('Kamil')
+else:
+    print('Nie da się wpisać')
+time.sleep(5)
+
+driver.close()
 driver.quit()
