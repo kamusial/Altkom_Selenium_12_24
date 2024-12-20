@@ -9,3 +9,9 @@ WebDriver BiDi listening on ws://127.0.0.1:60653
 Read port: 60664
 1734689005948	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 DevTools listening on ws://127.0.0.1:60653/devtools/browser/73ba5f49-5183-474d-8c48-6a80cc9c3576
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
+[[GFX[1GFX1-]-: ]CompositorBridgeChild receives IPC close with reason=AbnormalShutdown
+: CompositorBridgeChild recGFX1-]: CompositorBridgeChild receives IPC closeives IPCe wit h reason=AbnormalShutdownc
+lose with reason=AbnormalShutdown
+Exiting due to channel error.
