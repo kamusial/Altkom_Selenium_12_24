@@ -6,16 +6,22 @@ import pytest
 import sys
 
 test_data = [
-    ('standard_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html'),
+    ('standard_user', 'secret_saucea', 'https://www.saucedemo.com/inventory.html'),
     ('locked_out_user', 'secret_sauce', 'https://www.saucedemo.com/'),
     ('problem_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html'),
     ('performance_glitch_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html')
 ]
 
-@pytest.mark.skipif(len('piesek') == 6, reason='not implemented')
+@pytest.mark.skipif(len('piesek') == 5, reason='not implemented')
 @pytest.mark.parametrize('username, password, url', test_data)
 def test_login_page(username, password, url):
-    driver = webdriver.Firefox()
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--start-maximized')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--incognito')
+    driver = webdriver.Chrome(options=options)
     page = LoginPage(driver)
     page.open()
     page.print_page_info()
@@ -25,7 +31,7 @@ def test_login_page(username, password, url):
     sleep(3)
     page.print_page_info()
     try:
-        assert page.get_current_url() == url
+        assert page.get_current_url() == url, make_screenshot(driver)
     except AssertionError:
         print('Asercja nie przeszla')
         raise
@@ -33,7 +39,6 @@ def test_login_page(username, password, url):
         print('Asercja przeszła')
     finally:
         print('Koniec')
-        make_screenshot(driver)
         page.close()
 
 if sys.platform.startswith("win"):

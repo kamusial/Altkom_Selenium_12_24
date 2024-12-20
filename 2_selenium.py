@@ -13,7 +13,7 @@ driver = webdriver.Firefox()
 driver.get('https://www.saucedemo.com/')
 
 try:
-    username_field = driver.find_element('id', 'user-namea')
+    username_field = driver.find_element('id', 'user-name')
 except NoSuchElementException:
     make_screenshot(driver)
     driver.quit()

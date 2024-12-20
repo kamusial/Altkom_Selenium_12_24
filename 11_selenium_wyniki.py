@@ -32,7 +32,7 @@ def google_search(query, output_file='files\\strona.txt'):
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "search")))
 #
-    results = driver.find_elements(By.XPATH, "//div[@class='g']//a")
+    results = driver.find_elements(By.CSS_SELECTOR, 'div.g')
     print(results)
 
     data = []

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-12-20T11:50:30.524175" rpa="false" schemaversion="5">
+<suite id="s1" name="1 Robot Basic" source="C:\Users\Student\Desktop\Altkom_Selenium_12_24\15_robot_framework\1_robot_basic.robot">
+<test id="s1-t1" name="Successful Log in Wikipedia" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:30.982865" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<arg>https://pl.wikipedia.org</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-20T11:50:30.981860" elapsed="2.648543"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-20T11:50:33.640407" elapsed="0.198160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:33.840567" level="INFO">Clicking element 'pt-login-2'.</msg>
+<arg>pt-login-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:33.839567" elapsed="1.087766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:37.928757" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:34.928334" elapsed="3.000423"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:37.930832" level="INFO">Typing text 'RobotTests' into text field 'wpName'.</msg>
+<arg>wpName</arg>
+<arg>${wiki login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:37.929915" elapsed="0.146519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:39.077799" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:38.077446" elapsed="1.000353"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:39.079914" level="INFO">Typing text 'RobotFramework' into text field 'wpPassword1'.</msg>
+<arg>wpPassword1</arg>
+<arg>${wiki password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:39.078909" elapsed="0.170875"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:40.251236" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:39.250781" elapsed="1.000455"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:40.253329" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:40.252370" elapsed="0.131152"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:41.384962" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:40.384509" elapsed="1.000453"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:41.387414" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:41.386230" elapsed="5.134996"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:49.523890" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:46.522231" elapsed="3.001659"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-20T11:50:49.524913" elapsed="2.282744"/>
+</kw>
+<status status="PASS" start="2024-12-20T11:50:30.977934" elapsed="20.830875"/>
+</test>
+<test id="s1-t2" name="NonSuccessful Log in Wikipedia" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:51.813968" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<arg>https://pl.wikipedia.org</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-20T11:50:51.812954" elapsed="2.476186"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:54.289140" level="INFO">Clicking element 'pt-login-2'.</msg>
+<arg>pt-login-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:54.289140" elapsed="1.205033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:58.495717" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:55.495172" elapsed="3.000545"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:58.498339" level="INFO">Typing text 'RobotTests' into text field 'wpName'.</msg>
+<arg>wpName</arg>
+<arg>${wiki login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:58.497158" elapsed="0.141213"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:50:59.640267" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:58.639386" elapsed="1.000881"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:50:59.641223" level="INFO">Typing text '1234' into text field 'wpPassword1'.</msg>
+<arg>wpPassword1</arg>
+<arg>${wrong wiki password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:50:59.641223" elapsed="0.133457"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:51:00.776313" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:50:59.775682" elapsed="1.000631"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:51:00.776313" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:51:00.776313" elapsed="0.115578"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:51:01.893200" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:51:00.891891" elapsed="1.001309"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-20T11:51:01.895218" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:51:01.895218" elapsed="1.037256"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:51:05.934064" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:51:02.932474" elapsed="3.001590"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<arg>//*[@id="userloginForm"]/form/div[1]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T11:51:05.935557" elapsed="0.055417"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T11:51:08.992356" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T11:51:05.991954" elapsed="3.000402"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-20T11:51:08.993405" elapsed="2.228242"/>
+</kw>
+<status status="PASS" start="2024-12-20T11:50:51.811403" elapsed="19.411267"/>
+</test>
+<status status="PASS" start="2024-12-20T11:50:30.526179" elapsed="40.699509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="1 Robot Basic">1 Robot Basic</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
